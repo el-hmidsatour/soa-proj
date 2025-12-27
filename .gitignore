@@ -1,17 +1,47 @@
+# --- Maven ---
 target/
 pom.xml.tag
 pom.xml.releaseBackup
-pom.xml.versionsBackup
 pom.xml.next
 release.properties
 dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# https://maven.apache.org/wrapper/#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
 
-# Eclipse m2e generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
+# --- Compiled Java classes ---
+*.class
+
+# --- BlueJ files ---
+*.ctxt
+
+# --- Log files ---
+*.log
+
+# --- Package Files (The final WAR/JAR files) ---
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# --- Eclipse specific ---
+.metadata
 .classpath
+.project
+.settings/
+.factorypath
+bin/
+*.launch
+
+# --- IntelliJ specific ---
+.idea/
+*.iml
+*.iws
+out/
+
+# --- VS Code specific ---
+.vscode/
+
+# --- Operating System files ---
+.DS_Store
+Thumbs.db
