@@ -1,0 +1,56 @@
+package com.poly;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/")
+public class CarServlet extends HttpServlet {
+    private CarServiceImpl service = new CarServiceImpl();
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getServletPath();
+        if (action.equals("/insert") || action.equals("/update")) {
+            String brand = request.getParameter("brand");
+            String model = request.getParameter("model");
+            int year = Integer.parseInt(request.getParameter("year"));
+            
+            Car car = new Car(brand, model, year);
+            if (action.equals("/update")) {
+                car.setId(Integer.parseInt(request.getParameter("id")));
+                service.updateCar(car);
+            } else {
+                service.addCar(car);
+            }
+            response.sendRedirect("list");
+        }
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getServletPath();
+
+        try {
+            switch (action) {
+                case "/new":
+                    request.getRequestDispatcher("car-form.jsp").forward(request, response);
+                    break;
+                case "/edit":
+                    int id = Integer.parseInt(request.getParameter("id"));
+                    request.setAttribute("car", service.getCar(id));
+                    request.getRequestDispatcher("car-form.jsp").forward(request, response);
+                    break;
+                case "/delete":
+                    service.deleteCar(Integer.parseInt(request.getParameter("id")));
+                    response.sendRedirect("list");
+                    break;
+                default:
+                    request.setAttribute("listCars", service.getAllCars());
+                    request.getRequestDispatcher("car-list.jsp").forward(request, response);
+                    break;
+            }
+        } catch (Exception e) { e.printStackTrace(); }
+    }
+}
