@@ -1,4 +1,3 @@
-Voici la même version, avec des emojis (lisible et “GitHub-friendly”) :
 
 🚗 Car Management System
 📝 A simple Java web application to manage a car inventory with a complete CRUD workflow (Create, Read, Update, Delete).
