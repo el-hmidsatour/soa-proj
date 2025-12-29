@@ -1,30 +1,71 @@
+Voici la même version, avec des emojis (lisible et “GitHub-friendly”) :
+
 🚗 Car Management System
-📝 What is this?
-This is a simple web application for managing a car inventory. I built this to demonstrate a full CRUD (Create, Read, Update, Delete) workflow using Java. It allows you to add new cars, view the full list, edit details, or remove them from the database.
+📝 A simple Java web application to manage a car inventory with a complete CRUD workflow (Create, Read, Update, Delete).
+
+✨ Features
+➕ Add a new car to the database (Create)
+
+📋 Display all cars (Read)
+
+✏️ Update car information (Update)
+
+🗑️ Delete a car from the database (Delete)
+
 🛠 Tech Stack
-Language: Java 8
-Database: MySQL
-ORM: Hibernate (to handle database operations)
-Web: Servlets & JSP (JavaServer Pages)
-Design: Bootstrap 5 (for a clean, modern look)
-Build Tool: Maven
-🚀 How to Run It
+☕ Java 8
 
-Database Setup
-Make sure you have MySQL installed.
-Create a database named mydb:
-code
-SQL
+🌐 Servlets & JSP (JavaServer Pages)
+
+🗃️ Hibernate (ORM)
+
+🐬 MySQL
+
+📦 Maven
+
+🎨 Bootstrap 5
+​
+
+✅ Prerequisites
+Make sure you have installed:
+
+☕ Java 8 (JDK)
+
+🐬 MySQL Server
+
+🐱 Apache Tomcat 8.5 or 9
+
+📦 Maven
+
+💻 An IDE (IntelliJ IDEA or Eclipse)
+
+🗄 Database Setup
+🧱 Create a MySQL database named mydb:
+
+sql
 CREATE DATABASE mydb;
-Open src/main/resources/META-INF/persistence.xml and update your MySQL username and password.
+⚙️ Open:
+src/main/resources/META-INF/persistence.xml
+and update:
 
-Launching the App
-Import the project into your IDE (Eclipse or IntelliJ) as a Maven project.
-Right-click the project and select Run As > Run on Server.
-Choose Apache Tomcat (v8.5 or v9.0).
-Once the server starts, go to: http://localhost:6767/prj/
-🎥 Demo Video
-Check out how the app works here:
-👉
-💡 Good to Know
-The database tables are created automatically the first time you run the app thanks to Hibernate's update setting. No need to run complex SQL scripts manually!
+👤 MySQL username
+
+🔐 MySQL password
+
+🔗 (Optional) database URL if needed
+
+🚀 Run Locally (Tomcat)
+📥 Import the project as a Maven project (Eclipse/IntelliJ).
+
+▶️ Configure and run on a server:
+
+Eclipse: Run As > Run on Server
+
+Choose Apache Tomcat 8.5 or Tomcat 9
+
+🌍 Open the application in your browser:
+http://localhost:6767/prj/
+
+🎥 Demo
+▶️ Demo video on YouTube:
+https://www.youtube.com/watch?v=HuCHVZBOmlg
