@@ -1,4 +1,3 @@
-rewrite this  as readme :
 🚗 Car Management System
 📝 What is this?
 This is a simple web application for managing a car inventory. I built this to demonstrate a full CRUD (Create, Read, Update, Delete) workflow using Java. It allows you to add new cars, view the full list, edit details, or remove them from the database.
